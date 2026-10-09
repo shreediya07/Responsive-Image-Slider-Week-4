@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Defines the character encoding of the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed on the browser tab -->
+    <title>Responsive Image Slider</title>
+
+    <!-- Connects the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main heading of the image slider -->
+    <h1>Responsive Image Slider</h1>
+
+    <!-- Main slider component -->
+    <div class="slider">
+
+        <!--
+            Slider viewport controls the visible area
+            of the image slider.
+
+            CSS uses overflow: hidden so that
+            images outside the viewport are not visible.
+        -->
+        <div class="slider-viewport">
+
+            <!--
+                Slider track contains all the slides.
+                JavaScript moves this track horizontally
+                using transform: translateX().
+            -->
+            <div class="slider-track">
+
+                <!-- First image slide -->
+                <div class="slide">
+                    <img
+                        src="image/jungle.jpg"
+                        alt="Jungle"
+                    >
+                </div>
+
+                <!-- Second image slide -->
+                <div class="slide">
+                    <img
+                        src="image/lion.jpg"
+                        alt="Lion"
+                    >
+                </div>
+
+                <!-- Third image slide -->
+                <div class="slide">
+                    <img
+                        src="image/waterfall.jpg"
+                        alt="Waterfall"
+                    >
+                </div>
+
+                <!-- Fourth image slide -->
+                <div class="slide">
+                    <img
+                        src="image/mountain.jpg"
+                        alt="Mountain"
+                    >
+                </div>
+
+                <!-- Fifth image slide -->
+                <div class="slide">
+                    <img
+                        src="image/earth.jpg"
+                        alt="Save our Earth"
+                    >
+                </div>
+
+            </div>
+
+            <!--
+                Previous button.
+                Clicking this button moves to the
+                previous image.
+            -->
+            <button
+                class="slider-button previous"
+                aria-label="Previous slide"
+            >
+                &#10094;
+            </button>
+
+            <!--
+                Next button.
+                Clicking this button moves to the
+                next image.
+            -->
+            <button
+                class="slider-button next"
+                aria-label="Next slide"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+        <!--
+            Dot container.
+            JavaScript creates the navigation dots
+            for each image slide.
+        -->
+        <div class="dot-container"></div>
+
+    </div>
+
+    <!--
+        Connects the JavaScript file.
+
+        JavaScript provides:
+        Left Arrow  = Previous slide
+        Right Arrow = Next slide
+        Button navigation
+        Dot navigation
+    -->
+    <script src="slider.js"></script>
+
+</body>
+
+</html>
